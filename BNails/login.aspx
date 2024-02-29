@@ -82,11 +82,11 @@
                         </section>
                     </div>
                     <div class="user_forms-signup">
-                        <h2 class="forms_title">Sign Up</h2>
+                        <h2 class="forms_title">Registro</h2>
                         <section class="forms_form">
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtNombreRegister" NullText="Nombre completo" CssClass="forms_field-input" runat="server" ClientInstanceName="txtNombreRegister">
+                                    <dx:ASPxTextBox ID="txtNombreRegister" NullText="Nombre completo" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtNombreRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
@@ -104,7 +104,7 @@
                                     <%--<input type="email" placeholder="Email" class="forms_field-input" />--%>
                                 </div>
                                 <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtPasswordRegister" Password="true" NullText="Contraseña" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPasswordRegister">
+                                    <dx:ASPxTextBox ID="txtPasswordRegister" Password="true" NullText="Contraseña" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPasswordRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                             <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
