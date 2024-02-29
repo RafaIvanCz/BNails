@@ -175,7 +175,7 @@ input {
 
 .user_unregistered-text,
 .user_registered-text {
-    font-size: 0.83rem;
+    /*font-size: 0.83rem;*/
     line-height: 1.4em;
 }
 
@@ -185,18 +185,17 @@ input {
     border: 1px solid #ccc;
     border-radius: 3px;
     padding: 10px 30px;
-    color: #fff;
     text-transform: uppercase;
     line-height: 1em;
     letter-spacing: 0.2rem;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-    .user_registered-login:hover,
-    .user_unregistered-signup:hover {
-        color: rgba(34, 34, 34, 0.85);
-        background-color: #ccc;
-    }
+.user_registered-login:hover,
+.user_unregistered-signup:hover {
+    color: rgba(34, 34, 34, 0.85);
+    background-color: #ccc;
+}
 
 /**
  * * Login and signup forms
@@ -234,6 +233,7 @@ input {
     }
 
     .user_options-forms .forms_field-input {
+        border: none;
         width: 100%;
         border-bottom: 1px solid #ccc;
         padding: 6px 20px 6px 6px;
@@ -259,8 +259,6 @@ input {
     .user_options-forms .forms_buttons-forgot {
         font-family: "Montserrat", sans-serif;
         letter-spacing: 0.1rem;
-        color: #ccc;
-        text-decoration: underline;
         transition: color 0.2s ease-in-out;
     }
 
@@ -282,7 +280,8 @@ input {
     }
 
         .user_options-forms .forms_buttons-action:hover {
-            background-color: #e14641;
+            background-color: #e01e37;
+            color: #fff !important;
         }
 
     .user_options-forms .user_forms-signup,
