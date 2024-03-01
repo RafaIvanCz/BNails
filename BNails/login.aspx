@@ -35,8 +35,6 @@
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
-    
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -91,8 +89,6 @@
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
-
-                                    <%--<input type="text" placeholder="Full Name" class="forms_field-input" />--%>
                                 </div>
                                 <div class="forms_field">
                                     <dx:ASPxTextBox ID="txtEmailRegister" NullText="Correo electrónico" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtEmailRegister">
@@ -100,8 +96,6 @@
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
-
-                                    <%--<input type="email" placeholder="Email" class="forms_field-input" />--%>
                                 </div>
                                 <div class="forms_field">
                                     <dx:ASPxTextBox ID="txtPasswordRegister" Password="true" NullText="Contraseña" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPasswordRegister">
@@ -111,14 +105,10 @@
                                                 ErrorText="E-mail inválido." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
-
-                                    <%--<input type="password" placeholder="Password" class="forms_field-input" />--%>
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
                                 <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action"></dx:ASPxButton>
-
-                                <%--<input type="submit" value="Sign up" class="forms_buttons-action" />--%>
                             </div>
                         </section>
                     </div>
