@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping schema="dbo" assembly="Domain" namespace="Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Usuario" table="Usuario">
+    <id name="Id" type="Int32">
+      <column name="Id" not-null="true" precision="10" scale="0" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="Username" type="String">
+      <column name="Username" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Password" type="String">
+      <column name="Password" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Nombre" type="String">
+      <column name="Nombre" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Apellido" type="String">
+      <column name="Apellido" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Telefono" type="String">
+      <column name="Telefono" not-null="false" length="20" sql-type="nvarchar" />
+    </property>
+    <property name="Email" type="String">
+      <column name="Email" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Confirmacion" type="String">
+      <column name="Confirmacion" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="Eliminado" type="Boolean">
+      <column name="Eliminado" not-null="true" sql-type="bit" />
+    </property>
+    <property name="Activo" type="Boolean">
+      <column name="Activo" default="1" not-null="true" sql-type="bit" />
+    </property>
+    <property name="PrimerIngreso" type="Boolean">
+      <column name="PrimerIngreso" not-null="false" sql-type="bit" />
+    </property>
+    <property name="UltimoIngreso" type="DateTime">
+      <column name="UltimoIngreso" not-null="false" sql-type="datetime2" />
+    </property>
+    <property name="IngresoActual" type="DateTime">
+      <column name="IngresoActual" not-null="false" sql-type="datetime2" />
+    </property>
+    <set name="Clientes" inverse="true" generic="true">
+      <key>
+        <column name="IdUsuario" />
+      </key>
+      <one-to-many class="Clientes" />
+    </set>
+  </class>
+</hibernate-mapping>

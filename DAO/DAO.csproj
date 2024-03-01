@@ -46,6 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\dRouting.ClientesRepository.cs" />
+    <Compile Include="DAO\dRouting.FechaTurnosRepository.cs" />
+    <Compile Include="DAO\dRouting.ModuloRepository.cs" />
+    <Compile Include="DAO\dRouting.TurnosRepository.cs" />
+    <Compile Include="DAO\dRouting.UsuarioRepository.cs" />
+    <Compile Include="DAO\NHibernateRepository.cs" />
+    <Compile Include="DAO\NHibernateSessionProvider.cs" />
+    <Compile Include="DAO\NHibernateUnitOfWork.cs" />
+    <Compile Include="DAO\NHibernateUnitOfWorkFactory.cs" />
+    <Compile Include="Interfaces\IClientesRepository.cs" />
+    <Compile Include="Interfaces\IFechaTurnosRepository.cs" />
+    <Compile Include="Interfaces\IModuloRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ITurnosRepository.cs" />
+    <Compile Include="Interfaces\IUnitOfWork.cs" />
+    <Compile Include="Interfaces\IUnitOfWorkFactory.cs" />
+    <Compile Include="Interfaces\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,5 +86,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Clientes.cs" />
+    <Compile Include="Domain\FechaTurnos.cs" />
+    <Compile Include="Domain\Modulo.cs" />
+    <Compile Include="Domain\Turnos.cs" />
+    <Compile Include="Domain\Usuario.cs" />
+    <Compile Include="DTO\Converters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -68,6 +74,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Mappings\Clientes.hbm.xml" />
+    <Content Include="Mappings\FechaTurnos.hbm.xml" />
+    <Content Include="Mappings\Modulo.hbm.xml" />
+    <Content Include="Mappings\Turnos.hbm.xml" />
+    <Content Include="Mappings\Usuario.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
