@@ -69,7 +69,12 @@
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
-                                <dx:ASPxButton ID="btnForgotPassword" runat="server" Text="Olvidaste la contraseña?" RenderMode="Link" CssClass="text-danger fw-semibold forms_buttons-forgot"></dx:ASPxButton>
+
+                                <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" CssClass="fw-medium text-pink text-decoration-none" Cursor="pointer" Text="Olvidaste la contraseña?" Font-Size="Small" NavigateUrl="~/ResetPwd.aspx">
+                                    <%--<ClientSideEvents Click="function(s,e){MostrarLoading();}" />--%>
+                                </dx:ASPxHyperLink>
+
+                                <%--<dx:ASPxButton ID="btnForgotPassword" runat="server" Text="Olvidaste la contraseña?" RenderMode="Link" CssClass="text-danger fw-semibold forms_buttons-forgot"></dx:ASPxButton>--%>
 
                                 <dx:ASPxButton ID="btnIngresar" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" OnClick="btnIngresar_Click" runat="server" Text="Ingresar">
                                     <ClientSideEvents Click="function(s,e){}" />

@@ -243,11 +243,10 @@ input {
             border-color: gray;
         }
 
-    .user_options-forms .forms_buttons {
+    .user_options-forms {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 35px;
     }
 
     .user_options-forms .forms_buttons-forgot {

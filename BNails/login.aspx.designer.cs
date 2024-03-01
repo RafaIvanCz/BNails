@@ -60,13 +60,13 @@ namespace BNails
         protected global::DevExpress.Web.ASPxTextBox txtPassword;
 
         /// <summary>
-        /// Control btnForgotPassword.
+        /// Control ASPxHyperLink1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnForgotPassword;
+        protected global::DevExpress.Web.ASPxHyperLink ASPxHyperLink1;
 
         /// <summary>
         /// Control btnIngresar.

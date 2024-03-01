@@ -55,7 +55,7 @@
                                     </dx:ASPxTextBox>
                                 </div>
                             </fieldset>
-                            <div class="forms_buttons">
+                            <div class="mt-5 d-flex justify-content-end me-5">
                                 <dx:ASPxButton ID="btnRestablecer" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" OnClick="btnRestablecer_Click" runat="server" Text="Restablecer">
                                     <ClientSideEvents Click="function(s,e){}" />
                                 </dx:ASPxButton>
