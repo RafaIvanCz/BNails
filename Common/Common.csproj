@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{435E99FB-CBA3-424E-8444-8AC2D8F9C875}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{023D219A-4A2D-4ACD-95A9-48C991E8DD95}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Common</RootNamespace>
     <AssemblyName>Common</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,33 +31,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr3.Runtime.3.5.2-rc1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="ImageProcessor, Version=2.9.0.207, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="ImageProcessor">
       <HintPath>..\packages\ImageProcessor.2.9.0\lib\net452\ImageProcessor.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Remotion.Linq">
       <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Remotion.Linq.EagerFetching">
       <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Transactions" />
     <Reference Include="System.ValueTuple" />
@@ -67,46 +60,15 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conversiones_Explicitas\Conversiones.cs" />
-    <Compile Include="DDL\ItemCombo.cs" />
-    <Compile Include="DDL\ListaCombo.cs" />
-    <Compile Include="Encrypt\SimpleAES.cs" />
-    <Compile Include="Images\Convert.cs" />
-    <Compile Include="Permisos\PermisoControl.cs" />
-    <Compile Include="Permisos\PermisoModulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Struct\Estructuras.cs" />
-    <Compile Include="Web\Notificaciones.cs" />
-    <Compile Include="Web\RutasArchivos.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

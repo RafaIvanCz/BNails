@@ -721,18 +721,7 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Business\Business.csproj">
-      <Project>{6ade1f72-7b19-4e0c-b1f3-fc1f0b4fdc5e}</Project>
-      <Name>Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{435e99fb-cba3-424e-8444-8ac2d8f9c875}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{ceed84e0-59d1-42e0-9095-327481e313ad}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

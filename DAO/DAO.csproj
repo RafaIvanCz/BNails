@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4FFD9D66-6734-43C1-B3BD-BF87A1671796}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <ProjectGuid>{9A7ACF98-5A56-4C4B-8397-E9A6A6FA7207}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAO</RootNamespace>
     <AssemblyName>DAO</AssemblyName>
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,24 +31,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr3.Runtime.3.5.2-rc1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
     </Reference>
-    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="NHibernate">
       <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
     </Reference>
-    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Remotion.Linq">
       <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Remotion.Linq.EagerFetching">
       <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -62,18 +55,15 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\dRouting.ClientesRepository.cs" />
-    <Compile Include="DAO\dRouting.FechaTurnosRepository.cs" />
-    <Compile Include="DAO\dRouting.ModuloRepository.cs" />
-    <Compile Include="DAO\dRouting.TurnosRepository.cs" />
-    <Compile Include="DAO\dRouting.UsuarioRepository.cs" />
+    <Compile Include="DAO\ClientesRepository.cs" />
+    <Compile Include="DAO\FechaTurnosRepository.cs" />
+    <Compile Include="DAO\ModuloRepository.cs" />
+    <Compile Include="DAO\TurnosRepository.cs" />
+    <Compile Include="DAO\UsuarioRepository.cs" />
     <Compile Include="DAO\NHibernateRepository.cs" />
     <Compile Include="DAO\NHibernateSessionProvider.cs" />
     <Compile Include="DAO\NHibernateUnitOfWork.cs" />
@@ -87,36 +77,18 @@
     <Compile Include="Interfaces\IUnitOfWorkFactory.cs" />
     <Compile Include="Interfaces\IUsuarioRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{435e99fb-cba3-424e-8444-8ac2d8f9c875}</Project>
+      <Project>{023d219a-4a2d-4acd-95a9-48c991e8dd95}</Project>
       <Name>Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{ceed84e0-59d1-42e0-9095-327481e313ad}</Project>
+      <Project>{5a5a9583-3d13-4057-8514-be7b7443b9ca}</Project>
       <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
