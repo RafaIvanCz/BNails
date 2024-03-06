@@ -219,7 +219,7 @@ input {
     }
 
     .user_options-forms .forms_title {
-        margin-bottom: 45px;
+        margin-top: -20px;
         font-size: 1.5rem;
         font-weight: 500;
         line-height: 1em;

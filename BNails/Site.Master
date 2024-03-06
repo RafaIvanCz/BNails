@@ -9,12 +9,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Betsa Nails</title>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
+    <%--Style links--%>
+    <link href="App_Themes/Tema1/css/login/login.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/layout.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/layout.min.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/components.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/components.min.css" rel="stylesheet" />
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--bs styles--%>
+    <link href="App_Themes/Tema1/css/bootstrap/all.min.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/bootstrap/bootstrap_limitless.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/bootstrap/bootstrap_limitless.min.css" rel="stylesheet" />
+
+    <%-- bs JS --%>
+    <script src="App_Themes/Tema1/js/app.js"></script>
+    <script src="App_Themes/Tema1/js/bootstrap.bundle.min.js"></script>
+    <script src="App_Themes/Tema1/js/custom.js"></script>
+    <script src="App_Themes/Tema1/js/jquery.min.js"></script>
+    <script src="App_Themes/Tema1/js/prism.min.js"></script>
+
+    <%-- Swal JS & css --%>
+    <script src="App_Themes/Tema1/sweetAlerts/extra_sweetalert.js"></script>
+    <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
+    <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
 </head>
 <body>

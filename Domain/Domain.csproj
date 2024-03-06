@@ -80,11 +80,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Mappings\Clientes.hbm.xml" />
-    <Content Include="Mappings\FechaTurnos.hbm.xml" />
-    <Content Include="Mappings\Modulo.hbm.xml" />
-    <Content Include="Mappings\Turnos.hbm.xml" />
-    <Content Include="Mappings\Usuario.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Clientes.hbm.xml" />
+    <EmbeddedResource Include="Mappings\FechaTurnos.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Modulo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Turnos.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Usuario.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

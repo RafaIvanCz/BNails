@@ -35,6 +35,20 @@
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
+    <script type="text/javascript">
+
+        function showMessage(Mensaje) {
+
+            Swal.fire({
+                title: '',
+                text: Mensaje,
+                confirmButtonText: 'Continuar'
+            });
+        }
+
+    </script>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -56,22 +70,32 @@
 
                 <div class="user_options-forms" id="user_options-forms">
                     <div class="user_forms-login">
-                        <h2 class="forms_title">Login</h2>
+                        <h2 class="forms_title mb-4">Login</h2>
                         <section class="forms_form">
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtUsername" ClientInstanceName="txtUsername" NullTextDisplayMode="Unfocused" CssClass="forms_field-input mb-4" NullText="Nombre de Usuario" runat="server">
+                                    <dx:ASPxTextBox ID="txtUserEmail" NullText="E-mail" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtUserEmail">
+                                        <ValidationSettings ValidationGroup="ingreso" Display="Dynamic" ErrorTextPosition="Bottom">
+                                            <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                ErrorText="Formato inválido. 'ejemplo@ejemplo.com'" />
+                                        </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
+                                <%--<div class="form-group d-flex align-items-center">
+                                    <dx:ASPxLabel ID="lblError" Visible="false" runat="server" Text="" CssClass="alert alert-danger"></dx:ASPxLabel>
+                                </div>--%>
                                 <div class="forms_field">
                                     <dx:ASPxTextBox ID="txtPassword" Password="true" NullText="Contraseña" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPassword">
+                                        <ValidationSettings ValidationGroup="ingreso" SetFocusOnError="true" Display="Dynamic" ErrorTextPosition="Bottom">
+                                            <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                        </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
 
                                 <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" CssClass="fw-medium text-pink text-decoration-none" Cursor="pointer" Text="Olvidaste la contraseña?" Font-Size="Small" NavigateUrl="~/ResetPwd.aspx">
-                                    <%--<ClientSideEvents Click="function(s,e){MostrarLoading();}" />--%>
                                 </dx:ASPxHyperLink>
 
                                 <%--<dx:ASPxButton ID="btnForgotPassword" runat="server" Text="Olvidaste la contraseña?" RenderMode="Link" CssClass="text-danger fw-semibold forms_buttons-forgot"></dx:ASPxButton>--%>
@@ -85,11 +109,18 @@
                         </section>
                     </div>
                     <div class="user_forms-signup">
-                        <h2 class="forms_title">Registro</h2>
+                        <h2 class="forms_title mb-4">Registro</h2>
                         <section class="forms_form">
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtNombreRegister" NullText="Nombre completo" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtNombreRegister">
+                                    <dx:ASPxTextBox ID="txtNombreRegister" NullText="Nombre" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtNombreRegister">
+                                        <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
+                                            <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                        </ValidationSettings>
+                                    </dx:ASPxTextBox>
+                                </div>
+                                <div class="forms_field">
+                                    <dx:ASPxTextBox ID="txtApellidoRegister" NullText="Apellido" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtApellidoRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
@@ -99,6 +130,8 @@
                                     <dx:ASPxTextBox ID="txtEmailRegister" NullText="Correo electrónico" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtEmailRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                                                ErrorText="E-mail inválido. <br/> Formato correcto 'ejemplo@ejemplo.com'" />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
@@ -106,14 +139,12 @@
                                     <dx:ASPxTextBox ID="txtPasswordRegister" Password="true" NullText="Contraseña" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPasswordRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
-                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                                                ErrorText="E-mail inválido." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
-                                <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action"></dx:ASPxButton>
+                                <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action" OnClick="btnRegistro_Click"></dx:ASPxButton>
                             </div>
                         </section>
                     </div>
@@ -121,6 +152,13 @@
             </div>
         </section>
     </form>
+
+    <dx:ASPxLoadingPanel Theme="Moderno" ID="ASPxLoadingPanel2" Modal="true" ForeColor="#106488" ClientInstanceName="LoadingPanel"
+        runat="server" Text="Por favor espere...">
+    </dx:ASPxLoadingPanel>
+
+    
+
 </body>
 
     <script type="text/javascript">
@@ -143,7 +181,7 @@
         loginButton.addEventListener('click', () => {
             userForms.classList.remove('bounceLeft')
             userForms.classList.add('bounceRight')
-        }, false)
+        }, false)       
 
     </script>
 

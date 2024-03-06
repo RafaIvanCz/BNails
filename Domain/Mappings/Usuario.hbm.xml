@@ -5,26 +5,17 @@
       <column name="Id" not-null="true" precision="10" scale="0" sql-type="int" />
       <generator class="identity" />
     </id>
-    <property name="Username" type="String">
-      <column name="Username" not-null="false" length="50" sql-type="nvarchar" />
-    </property>
-    <property name="Password" type="String">
-      <column name="Password" not-null="false" length="50" sql-type="nvarchar" />
-    </property>
     <property name="Nombre" type="String">
       <column name="Nombre" not-null="false" length="50" sql-type="nvarchar" />
     </property>
     <property name="Apellido" type="String">
       <column name="Apellido" not-null="false" length="50" sql-type="nvarchar" />
     </property>
-    <property name="Telefono" type="String">
-      <column name="Telefono" not-null="false" length="20" sql-type="nvarchar" />
-    </property>
     <property name="Email" type="String">
       <column name="Email" not-null="false" length="50" sql-type="nvarchar" />
     </property>
-    <property name="Confirmacion" type="String">
-      <column name="Confirmacion" not-null="false" sql-type="nvarchar" />
+    <property name="Password" type="String">
+      <column name="Password" not-null="false" length="50" sql-type="nvarchar" />
     </property>
     <property name="Eliminado" type="Boolean">
       <column name="Eliminado" not-null="true" sql-type="bit" />

@@ -38,13 +38,13 @@ namespace DAO
             if (!session.Transaction.IsActive)
             {
                 using (ITransaction transaction = session.BeginTransaction())
-				        {
-                    session.Save(entity);
+                {
+                    session.SaveOrUpdate(entity);
                     transaction.Commit();
-				        }
+                }
             }
             else
-                session.Save(entity);
+                session.SaveOrUpdate(entity);
         }
 
         public virtual void Remove(T entity)

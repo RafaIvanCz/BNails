@@ -42,13 +42,13 @@ namespace BNails
         protected global::DevExpress.Web.ASPxButton btnLogin;
 
         /// <summary>
-        /// Control txtUsername.
+        /// Control txtUserEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxTextBox txtUsername;
+        protected global::DevExpress.Web.ASPxTextBox txtUserEmail;
 
         /// <summary>
         /// Control txtPassword.
@@ -87,6 +87,15 @@ namespace BNails
         protected global::DevExpress.Web.ASPxTextBox txtNombreRegister;
 
         /// <summary>
+        /// Control txtApellidoRegister.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxTextBox txtApellidoRegister;
+
+        /// <summary>
         /// Control txtEmailRegister.
         /// </summary>
         /// <remarks>
@@ -112,5 +121,14 @@ namespace BNails
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.ASPxButton btnRegistro;
+
+        /// <summary>
+        /// Control ASPxLoadingPanel2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLoadingPanel ASPxLoadingPanel2;
     }
 }

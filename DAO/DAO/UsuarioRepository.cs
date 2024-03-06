@@ -11,7 +11,42 @@ using NHibernate.Linq;
 
 namespace DAO
 {
-    public partial class UsuarioRepository
+    public partial class UsuarioRepository : NHibernateRepository<Domain.Usuario>, IUsuarioRepository
     {
+        public UsuarioRepository(ISession session) : base(session)
+        {
+        }
+        public virtual IList<Domain.Usuario> GetAll()
+        {
+            return session.CreateQuery(string.Format("from Usuario")).List<Domain.Usuario>();
+        }
+
+        public virtual Domain.Usuario GetByEmail(string userEmail)
+        {
+            Domain.Usuario lista;
+            lista = session.CreateQuery(string.Format("from Usuario WHERE lower(Email) = :email and Activo='true'"))
+                .SetParameter("email", userEmail.ToLower())
+                .UniqueResult<Domain.Usuario>();
+            if (lista != null)
+            {
+                //foreach (Rol ra in lista.Rols)
+                //{
+                //    NHibernateUtil.Initialize(ra.RolModulos);
+                //}
+            }
+            return lista;
+        }
+
+        public virtual Domain.Usuario ExisteEmailUser(string email)
+        {
+            return session.CreateQuery(string.Format("from Usuario WHERE lower(Email) = :email and Activo='true'"))
+                .SetParameter("email", email.ToLower())
+                .UniqueResult<Domain.Usuario>();
+        }
+
+        public virtual Domain.Usuario GetByKey(int _Id)
+        {
+            return session.Get<Domain.Usuario>(_Id);
+        }
     }
 }
