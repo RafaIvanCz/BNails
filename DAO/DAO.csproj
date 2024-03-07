@@ -60,6 +60,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ClientesRepository.cs" />
+    <Compile Include="DAO\CallesRepository.cs" />
+    <Compile Include="DAO\ClienteDomicilioRepository.cs" />
+    <Compile Include="DAO\ConfiguracionesRepository.cs" />
+    <Compile Include="DAO\TelefonoTipoRepository.cs" />
+    <Compile Include="DAO\LocalidadesRepository.cs" />
+    <Compile Include="DAO\ProvinciasRepository.cs" />
     <Compile Include="DAO\FechaTurnosRepository.cs" />
     <Compile Include="DAO\ModuloRepository.cs" />
     <Compile Include="DAO\TurnosRepository.cs" />
@@ -68,10 +74,16 @@
     <Compile Include="DAO\NHibernateSessionProvider.cs" />
     <Compile Include="DAO\NHibernateUnitOfWork.cs" />
     <Compile Include="DAO\NHibernateUnitOfWorkFactory.cs" />
+    <Compile Include="Interfaces\ICallesRepository.cs" />
+    <Compile Include="Interfaces\IClienteDomicilioRepository.cs" />
     <Compile Include="Interfaces\IClientesRepository.cs" />
+    <Compile Include="Interfaces\IConfiguracionesRepository.cs" />
     <Compile Include="Interfaces\IFechaTurnosRepository.cs" />
+    <Compile Include="Interfaces\ILocalidadesRepository.cs" />
     <Compile Include="Interfaces\IModuloRepository.cs" />
+    <Compile Include="Interfaces\IProvinciasRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\ITelefonoTipoRepository.cs" />
     <Compile Include="Interfaces\ITurnosRepository.cs" />
     <Compile Include="Interfaces\IUnitOfWork.cs" />
     <Compile Include="Interfaces\IUnitOfWorkFactory.cs" />

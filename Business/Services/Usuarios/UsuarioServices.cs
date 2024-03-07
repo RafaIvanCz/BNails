@@ -11,20 +11,6 @@ namespace Business.Services.Usuarios
 {
     public class UsuarioServices
     {
-        public static Usuario GetByEmail(string userEmail)
-        {
-            Usuario lista;
-
-            using (NHibernate.ISession sess = NHibernateSessionProvider.GetSession())
-            {
-                lista = new UsuarioRepository(sess).GetByEmail(userEmail);
-
-                sess.Close();
-                sess.Dispose();
-                return lista;
-            }
-        }
-
         public static IList<Usuario> GetAll()
         {
 
@@ -56,6 +42,34 @@ namespace Business.Services.Usuarios
                 return listaSalida;
             }
 
+        }
+
+        public static Usuario GetByEmail(string userEmail)
+        {
+            Usuario lista;
+
+            using (NHibernate.ISession sess = NHibernateSessionProvider.GetSession())
+            {
+                lista = new UsuarioRepository(sess).GetByEmail(userEmail);
+
+                sess.Close();
+                sess.Dispose();
+                return lista;
+            }
+        }
+
+        public static Usuario ExisteEmail(string email)
+        {
+            Usuario lista;
+
+            using (NHibernate.ISession sess = NHibernateSessionProvider.GetSession())
+            {
+                lista = new UsuarioRepository(sess).GetEmail(email);
+
+                sess.Close();
+                sess.Dispose();
+                return lista;
+            }
         }
 
         public static bool ExisteEmailUser(string email)

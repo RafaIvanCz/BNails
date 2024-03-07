@@ -67,9 +67,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Calles.cs" />
+    <Compile Include="Domain\ClienteDomicilio.cs" />
     <Compile Include="Domain\Clientes.cs" />
+    <Compile Include="Domain\Configuraciones.cs" />
     <Compile Include="Domain\FechaTurnos.cs" />
+    <Compile Include="Domain\Localidades.cs" />
     <Compile Include="Domain\Modulo.cs" />
+    <Compile Include="Domain\Provincias.cs" />
+    <Compile Include="Domain\TelefonoTipo.cs" />
     <Compile Include="Domain\Turnos.cs" />
     <Compile Include="Domain\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,13 +84,22 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\Calles.hbm.xml" />
+    <EmbeddedResource Include="Mappings\ClienteDomicilio.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Configuraciones.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Localidades.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Provincias.hbm.xml" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\Clientes.hbm.xml" />
     <EmbeddedResource Include="Mappings\FechaTurnos.hbm.xml" />
     <EmbeddedResource Include="Mappings\Modulo.hbm.xml" />
     <EmbeddedResource Include="Mappings\Turnos.hbm.xml" />
     <EmbeddedResource Include="Mappings\Usuario.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\TelefonoTipo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping schema="dbo" assembly="Domain" namespace="Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Localidades" table="Localidades">
+    <id name="Id" type="Int32">
+      <column name="Id" not-null="true" precision="10" scale="0" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="Nombre" type="String">
+      <column name="Nombre" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Abreviatura" type="String">
+      <column name="Abreviatura" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="CodPostal" type="Int16">
+      <column name="CodPostal" not-null="false" precision="5" scale="0" sql-type="smallint" />
+    </property>
+    <property name="Activa" type="Boolean">
+      <column name="Activa" not-null="true" sql-type="bit" />
+    </property>
+    <many-to-one name="Provincias" class="Provincias">
+      <column name="IdProvincia" not-null="false" precision="10" scale="0" sql-type="int" />
+    </many-to-one>
+    <set name="Calles" inverse="true" generic="true">
+      <key>
+        <column name="IdLocalidad" />
+      </key>
+      <one-to-many class="Calles" />
+    </set>
+  </class>
+</hibernate-mapping>

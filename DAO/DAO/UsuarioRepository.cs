@@ -37,6 +37,20 @@ namespace DAO
             return lista;
         }
 
+        public virtual Domain.Usuario GetEmail(string email)
+        {
+            Domain.Usuario lista;
+            lista = session.CreateQuery(string.Format("from Usuario where lower(Email) = :email ")).SetParameter("email", email).UniqueResult<Domain.Usuario>();
+            //if (lista != null)
+            //{
+            //    foreach (Rol ra in lista.Rols)
+            //    {
+            //        NHibernateUtil.Initialize(ra.RolModulos);
+            //    }
+            //}
+            return lista;
+        }
+
         public virtual Domain.Usuario ExisteEmailUser(string email)
         {
             return session.CreateQuery(string.Format("from Usuario WHERE lower(Email) = :email and Activo='true'"))

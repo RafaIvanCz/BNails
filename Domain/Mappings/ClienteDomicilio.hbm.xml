@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping schema="dbo" assembly="Domain" namespace="Domain" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="ClienteDomicilio" table="ClienteDomicilio">
+    <id name="Id" type="Int32">
+      <column name="Id" not-null="true" precision="10" scale="0" sql-type="int" />
+      <generator class="identity" />
+    </id>
+    <property name="EntreCalles" type="String">
+      <column name="EntreCalles" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="Altura" type="String">
+      <column name="Altura" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Casa" type="String">
+      <column name="Casa" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Piso" type="String">
+      <column name="Piso" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Dpto" type="String">
+      <column name="Dpto" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Manzana" type="String">
+      <column name="Manzana" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Lote" type="String">
+      <column name="Lote" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="DuplexModulo" type="String">
+      <column name="DuplexModulo" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Peatonal" type="String">
+      <column name="Peatonal" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Latitud" type="String">
+      <column name="Latitud" not-null="false" sql-type="nvarchar" />
+    </property>
+    <property name="Longitud" type="String">
+      <column name="Longitud" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Barrio" type="String">
+      <column name="Barrio" not-null="false" length="50" sql-type="nvarchar" />
+    </property>
+    <property name="Observaciones" type="String">
+      <column name="Observaciones" not-null="false" sql-type="nvarchar" />
+    </property>
+    <many-to-one name="Clientes" class="Clientes">
+      <column name="IdCliente" not-null="false" precision="10" scale="0" sql-type="int" />
+    </many-to-one>
+    <many-to-one name="Calles" class="Calles">
+      <column name="IdCalle" not-null="false" precision="10" scale="0" sql-type="int" />
+    </many-to-one>
+  </class>
+</hibernate-mapping>
