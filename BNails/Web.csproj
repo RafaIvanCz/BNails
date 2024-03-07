@@ -282,6 +282,7 @@
     <Content Include="App_Themes\Tema1\css\bootstrap\bootstrap.min.css" />
     <Content Include="App_Themes\Tema1\css\bootstrap\bootstrap_limitless.css" />
     <Content Include="App_Themes\Tema1\css\bootstrap\bootstrap_limitless.min.css" />
+    <Content Include="App_Themes\Tema1\css\changePwd\changePwd.css" />
     <Content Include="App_Themes\Tema1\css\components.css" />
     <Content Include="App_Themes\Tema1\css\components.min.css" />
     <Content Include="App_Themes\Tema1\css\layout.css" />
@@ -602,6 +603,7 @@
     <Content Include="bin\roslyn\vbc.exe.config" />
     <Content Include="bin\roslyn\vbc.rsp" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <Content Include="ChangePwd.aspx" />
     <None Include="bin\Web.dll.config" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
@@ -674,13 +676,17 @@
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs" />
     <Compile Include="ResetPwd.aspx.cs">
       <DependentUpon>ResetPwd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ResetPwd.aspx.designer.cs">
       <DependentUpon>ResetPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Settings.resx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -702,6 +708,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -737,7 +750,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Properties\Settings.resx" />
+    <EmbeddedResource Include="Settings\Settings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

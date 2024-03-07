@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ResetPwd.aspx.cs" Inherits="BNails.ResetPwd" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ChangePwd.aspx.cs" Inherits="BNails.ChangePwd" %>
 
 <%@ Register Assembly="DevExpress.Web.v18.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
 
@@ -7,10 +7,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Recuperación de Contraseña</title>
+    <title>Cambio de Contraseña</title>
 
     <%--Style links--%>
-    <link href="App_Themes/Tema1/css/resetPwd/resetPwd.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/changePwd/changePwd.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/layout.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/layout.min.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/components.css" rel="stylesheet" />
@@ -35,28 +35,39 @@
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
+
 </head>
 <body>
-    <form id="resetPwd" runat="server">
+    <form id="changePwd" runat="server">
         <section class="user">
             <div class="user_options-container">
                 <div class="user_options-forms w-50 h-50" id="user_options-forms">
                     <div class="user_forms-login">
-                        <h2 class="forms_title">Recuperar contraseña</h2>
+                        <h2 class="forms_title">Cambio de contraseña</h2>
                         <section class="forms_form">
+
                             <fieldset class="forms_fieldset">
-                                <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtEmailRestorePwd" ClientInstanceName="txtEmailRestorePwd" CssClass="forms_field-input" AutoCompleteType="Disabled" NullText="ejemplo@ejemplo.com" Width="100%" runat="server">
-                                        <ValidationSettings SetFocusOnError="True" Display="Dynamic" ErrorTextPosition="Bottom">
+                                <div class="forms_field mb-4">
+                                    <dx:ASPxTextBox ID="txtNewPwd" ClientInstanceName="txtNewPwd" CssClass="forms_field-input" AutoCompleteType="Disabled" Width="100%" NullText="Contraseña nueva" runat="server">
+                                        <ValidationSettings ValidationGroup="changePwd" SetFocusOnError="True" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
-                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                                                ErrorText="E-mail inválido." />
+                                            <RegularExpression ValidationExpression="^[a-zA-Z0-9#$%&]{6,}$" ErrorText="Formato inválido. La contraseña debe tener al menos 6 caracteres." />
+                                        </ValidationSettings>
+                                    </dx:ASPxTextBox>
+                                </div>
+
+                                <div class="forms_field">
+                                    <dx:ASPxTextBox ID="txtRepeatNewPwd" ClientInstanceName="txtRepeatNewPwd" CssClass="forms_field-input" AutoCompleteType="Disabled" Width="100%" NullText="Repetir contraseña nueva" runat="server">
+                                        <ValidationSettings ValidationGroup="changePwd" SetFocusOnError="True" Display="Dynamic" ErrorTextPosition="Bottom">
+                                            <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                            <RegularExpression ValidationExpression="^[a-zA-Z0-9#$%&]{6,}$" ErrorText="Formato inválido. La contraseña debe tener al menos 6 caracteres." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
                             </fieldset>
+
                             <div class="mt-5 d-flex justify-content-end me-5">
-                                <dx:ASPxButton ID="btnRestablecer" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" runat="server" Text="Restablecer">
+                                <dx:ASPxButton ID="btnConfirmChangePwd" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" runat="server" Text="Cambiar">
                                     <ClientSideEvents Click="function(s,e){}" />
                                 </dx:ASPxButton>
                             </div>

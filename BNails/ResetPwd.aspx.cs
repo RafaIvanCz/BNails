@@ -28,20 +28,19 @@ namespace BNails
 
             try
             {
-                Usuario u = UsuarioServices.ExisteEmail(correo);
-                if (u != null)
+                Usuario user = UsuarioServices.ExisteEmail(correo);
+
+                if (user != null)
                 {
-
-
-                    String persona = u.Nombre + " " + u.Apellido;
-                    String urlRestablecer = Request.Url.GetLeftPart(UriPartial.Authority) + Global.ApplicationPath + "/CheckPwd.aspx?id=";
-                    String encrypt = persona + u.Email + DateTime.Now;
+                    String persona = user.Nombre;
+                    String urlRestablecer = Request.Url.GetLeftPart(UriPartial.Authority) + Global.ApplicationPath + "/ChangePwd.aspx?id=";
+                    String encrypt = persona + user.Email + DateTime.Now;
                     SimpleAES sp = new SimpleAES();
                     String encryptData = sp.EncryptToString(encrypt);
 
                     //Guardo la encriptación para recuperación de contraseña
-                    u.Confirmacion = encryptData;
-                    UsuarioServices.SaveOrUpdate(u);
+                    user.Confirmacion = encryptData;
+                    UsuarioServices.SaveOrUpdate(user);
                     Configuraciones cfg = ConfiguracionServices.getFirst();
                     if (cfg != null)
                     {
@@ -55,13 +54,13 @@ namespace BNails
                                       "Si solicitaste este cambio de contraseña, por favor, ingresa una contraseña nueva usando el enlace a continuación:<br><br>" +
                                       "<a href='" + urlRestablecer + encryptData + "'>Cambiar Contraseña</a>" +
                                       "<br><br>Si no deseas cambiar tu contraseña, ignora este mensaje.<br><br>" +
-                                      "Gracias.<br>" + Properties.Settings.NombreApp;
+                                      "Gracias.<br>" + Settings.Settings.NombreApp;
 
                         MailMessage mail = new MailMessage()
                         {
-                            From = new MailAddress(from, Properties.Settings.NombreApp),
+                            From = new MailAddress(from, Settings.Settings.NombreApp),
                             Body = body,
-                            Subject = "Recuperación de contraseña de " + Properties.Settings.NombreApp,
+                            Subject = "Recuperación de contraseña de " + Settings.Settings.NombreApp,
                             IsBodyHtml = true,
                         };
 

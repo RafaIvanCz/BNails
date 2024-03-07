@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bnails.Properties {
+namespace BNails.Settings {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Bnails.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Web.Properties.Settings", typeof(Settings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BNails.Settings.Settings", typeof(Settings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace Bnails.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a agustin@dityc.com.ar.
+        ///   Busca una cadena traducida similar a rafaelivancz@gmail.com.
         /// </summary>
         internal static string EmailApp {
             get {
@@ -70,7 +70,7 @@ namespace Bnails.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a agustin@dityc.com.ar.
+        ///   Busca una cadena traducida similar a rafaelivancz@gmail.com.
         /// </summary>
         internal static string EmailInfo {
             get {
@@ -79,7 +79,7 @@ namespace Bnails.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a PH Solutions.
+        ///   Busca una cadena traducida similar a BNails.
         /// </summary>
         internal static string NombreApp {
             get {
