@@ -23,6 +23,9 @@
     <property name="Activo" type="Boolean">
       <column name="Activo" default="1" not-null="true" sql-type="bit" />
     </property>
+    <property name="Confirmacion" type="String">
+      <column name="Confirmacion" not-null="false" sql-type="nvarchar" />
+    </property>
     <property name="PrimerIngreso" type="Boolean">
       <column name="PrimerIngreso" not-null="false" sql-type="bit" />
     </property>

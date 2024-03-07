@@ -11,7 +11,20 @@ using NHibernate.Linq;
 
 namespace DAO
 {
-    public partial class ConfiguracionesRepository
+    public partial class ConfiguracionesRepository : NHibernateRepository<Domain.Configuraciones>, IConfiguracionesRepository
     {
+        public ConfiguracionesRepository(ISession session) : base(session)
+        {
+        }
+
+        public virtual Domain.Configuraciones GetFirst()
+        {
+            return session.CreateQuery(string.Format("from Configuraciones")).SetMaxResults(1).UniqueResult<Domain.Configuraciones>();
+        }
+
+        public virtual Domain.Configuraciones GetByKey(int _Id)
+        {
+            return session.Get<Domain.Configuraciones>(_Id);
+        }
     }
 }

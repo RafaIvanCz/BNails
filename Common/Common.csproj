@@ -64,11 +64,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conversiones_explicitas\Conversiones.cs" />
+    <Compile Include="DDL\ItemCombo.cs" />
+    <Compile Include="DDL\ListaCombo.cs" />
+    <Compile Include="Encrypt\SimpleAES.cs" />
+    <Compile Include="Images\Convert.cs" />
+    <Compile Include="Permisos\PermisoControl.cs" />
+    <Compile Include="Permisos\PermisoModulo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Struct\Estructuras.cs" />
+    <Compile Include="Web\Notificaciones.cs" />
+    <Compile Include="Web\RutasArchivos.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
