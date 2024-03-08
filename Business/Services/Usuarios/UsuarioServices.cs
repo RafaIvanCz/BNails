@@ -1,6 +1,7 @@
 ﻿using DAO;
 using Domain;
 using NHibernate;
+using NHibernate.Criterion;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,6 +106,27 @@ namespace Business.Services.Usuarios
                 return u;
             }
 
+        }
+
+        public static Usuario ConfirmarPwd(string query)
+        {
+            Usuario u;
+            using (NHibernate.ISession sess = NHibernateSessionProvider.GetSession())
+            {
+                ICriteria criteria = sess.CreateCriteria<Usuario>();
+                criteria.Add(Restrictions.Eq("Eliminado", false));
+                criteria.Add(Restrictions.Like("Confirmacion", query, MatchMode.Exact).IgnoreCase());
+                u = criteria.UniqueResult<Usuario>();
+
+                //if (u != null)
+                //{
+                //    NHibernateUtil.Initialize(u.Rols);
+
+                //}
+                sess.Close();
+                sess.Dispose();
+                return u;
+            }
         }
 
         public static void SaveOrUpdate(Usuario u)

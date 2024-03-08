@@ -35,6 +35,18 @@
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
+    <script type="text/javascript">
+
+        function showMessage(Mensaje) {
+
+            Swal.fire({
+                title: '',
+                text: Mensaje,
+                confirmButtonText: 'Continuar'
+            });
+        }
+
+    </script>
 
 </head>
 <body>
@@ -67,7 +79,11 @@
                             </fieldset>
 
                             <div class="mt-5 d-flex justify-content-end me-5">
-                                <dx:ASPxButton ID="btnConfirmChangePwd" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" runat="server" Text="Cambiar">
+                                <dx:ASPxButton ID="btnConfirmChangePwd" CssClass="text-decoration-none forms_buttons-action" OnClick="btnConfirmChangePwd_Click" RenderMode="Link" runat="server" Text="Cambiar">
+                                    <ClientSideEvents Click="function(s,e){}" />
+                                </dx:ASPxButton>
+
+                                <dx:ASPxButton ID="btnBackLogin" CssClass="text-decoration-none forms_buttons-action" Visible="false" OnClick="btnBackLogin_Click" RenderMode="Link" runat="server" Text="Loguearme">
                                     <ClientSideEvents Click="function(s,e){}" />
                                 </dx:ASPxButton>
                             </div>

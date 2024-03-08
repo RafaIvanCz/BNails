@@ -21,7 +21,7 @@ namespace BNails
 
         }
 
-        protected void btnRestablecer_Click(object sender, EventArgs e)
+        protected void btnRestorePwd_Click(object sender, EventArgs e)
         {
             //Verifico la existencia del mail ingresado
             String correo = txtEmailRestorePwd.Text;
@@ -50,8 +50,8 @@ namespace BNails
                         String smtpServer = cfg.SMTPServer;
                         String smtpPort = cfg.SMTPPort.ToString();
                         String body = "Hola " + persona +
-                                      "<br><br>Se hizo una solicitud de cambio de contraseña recientemente en tu cuenta.<br>" +
-                                      "Si solicitaste este cambio de contraseña, por favor, ingresa una contraseña nueva usando el enlace a continuación:<br><br>" +
+                                      "<br><br>Hiciste una solicitud de cambio de contraseña recientemente en tu cuenta de B-Nails.<br>" +
+                                      "Si fuiste vos, por favor, ingresa una contraseña nueva usando el enlace a continuación:<br><br>" +
                                       "<a href='" + urlRestablecer + encryptData + "'>Cambiar Contraseña</a>" +
                                       "<br><br>Si no deseas cambiar tu contraseña, ignora este mensaje.<br><br>" +
                                       "Gracias.<br>" + Settings.Settings.NombreApp;
@@ -65,13 +65,18 @@ namespace BNails
                         };
 
                         mail.To.Add(new MailAddress(correo, persona));
-                        SmtpClient smtp = new SmtpClient();
+                        SmtpClient smtp = new SmtpClient(smtpServer, Convert.ToInt32(smtpPort))
+                        {
+                            UseDefaultCredentials = false,
+                            Credentials = new NetworkCredential(mailUser, mailPassword),
+                            EnableSsl = true,
+                        };
                         smtp.Host = smtpServer;
                         smtp.Port = Convert.ToInt32(smtpPort);
                         smtp.Credentials = new NetworkCredential(mailUser, mailPassword);
                         smtp.Send(mail);
 
-                        ScriptManager.RegisterStartupScript(this,this.GetType(),"key1", "showMessage('Email enviado correctamente.')",true);
+                        ScriptManager.RegisterStartupScript(this,this.GetType(),"key1", "showMessage('Email enviado correctamente. Revisá tu correo.')",true);
                         txtEmailRestorePwd.Text = "";
                     }
                 }

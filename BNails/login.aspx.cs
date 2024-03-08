@@ -23,7 +23,7 @@ namespace BNails
 
                 if (UsuarioServices.ExisteEmailUser(emailUser) == false)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Email no registrado. Debe registrarse antes de ingresar.');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Email no registrado. Debe registrarse antes de ingresar.')", true);
                 }
                 else
                 {
@@ -66,16 +66,14 @@ namespace BNails
                         }
                         else
                         {
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('No existe el usuario ingresado');", true);
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('No existe el usuario ingresado')", true);
                         }
                     }
                     else
                     {
-                        ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('La contraseña es incorrecta!');", true);
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('La contraseña es incorrecta!')", true);
                     }
                 }
-
-
 
             }catch (Exception ex)
             {
@@ -91,7 +89,7 @@ namespace BNails
 
                 if (UsuarioServices.ExisteEmailUser(emailRegister) == true)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Ya existe un usuario con ese Email.');", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Ya existe un usuario con ese Email.')", true);
                 }
                 else
                 {
@@ -106,8 +104,7 @@ namespace BNails
 
                     UsuarioServices.SaveOrUpdate(user);
 
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Usuario creado con éxito! Ya podés ingresar al sistema ☺');", true);
-
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Usuario creado con éxito! Ya podés ingresar al sistema ☺')", true);
 
                 }
 

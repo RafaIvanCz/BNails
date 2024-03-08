@@ -46,6 +46,19 @@
             });
         }
 
+        function ValidateIngresoOnClick(s, e) {
+
+            if (ASPxClientEdit.ValidateGroup('ingreso')) {
+                LoadingPanel.Show();
+
+                return true;
+            }
+            else {
+
+                return false;
+            }
+        }
+
     </script>
 
 
@@ -86,7 +99,7 @@
                                     <dx:ASPxLabel ID="lblError" Visible="false" runat="server" Text="" CssClass="alert alert-danger"></dx:ASPxLabel>
                                 </div>--%>
                                 <div class="forms_field">
-                                    <dx:ASPxTextBox ID="txtPassword" Password="true" NullText="Contraseña" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPassword">
+                                    <dx:ASPxTextBox ID="txtPassword" Password="true" NullText="Contraseña" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPassword">
                                         <ValidationSettings ValidationGroup="ingreso" SetFocusOnError="true" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
@@ -101,7 +114,7 @@
                                 <%--<dx:ASPxButton ID="btnForgotPassword" runat="server" Text="Olvidaste la contraseña?" RenderMode="Link" CssClass="text-danger fw-semibold forms_buttons-forgot"></dx:ASPxButton>--%>
 
                                 <dx:ASPxButton ID="btnIngresar" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" OnClick="btnIngresar_Click" runat="server" Text="Ingresar">
-                                    <ClientSideEvents Click="function(s,e){}" />
+                                    <ClientSideEvents Click="function(s,e) { ValidateIngresoOnClick(s,e) }" />
                                 </dx:ASPxButton>
 
                                 <%--<input type="submit" value="Log In" class="forms_buttons-action" />--%>
@@ -144,7 +157,9 @@
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
-                                <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action" OnClick="btnRegistro_Click"></dx:ASPxButton>
+                                <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" AutoPostBack="false" CausesValidation="false" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action" OnClick="btnRegistro_Click">
+
+                                </dx:ASPxButton>
                             </div>
                         </section>
                     </div>

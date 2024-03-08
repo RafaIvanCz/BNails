@@ -35,6 +35,19 @@
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
 
+    <script type="text/javascript">
+
+        function showMessage(Mensaje) {
+
+            Swal.fire({
+                title: '',
+                text: Mensaje,
+                confirmButtonText: 'Continuar'
+            });
+        }
+
+    </script>
+
 </head>
 <body>
     <form id="resetPwd" runat="server">
@@ -56,7 +69,7 @@
                                 </div>
                             </fieldset>
                             <div class="mt-5 d-flex justify-content-end me-5">
-                                <dx:ASPxButton ID="btnRestablecer" CssClass="text-decoration-none forms_buttons-action" RenderMode="Link" runat="server" Text="Restablecer">
+                                <dx:ASPxButton ID="btnRestorePwd" CssClass="text-decoration-none forms_buttons-action" OnClick="btnRestorePwd_Click" RenderMode="Link" runat="server" Text="Restablecer">
                                     <ClientSideEvents Click="function(s,e){}" />
                                 </dx:ASPxButton>
                             </div>
