@@ -79,7 +79,7 @@ namespace BNails.Settings {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a BNails.
+        ///   Busca una cadena traducida similar a B-Nails.
         /// </summary>
         internal static string NombreApp {
             get {

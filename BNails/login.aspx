@@ -59,6 +59,19 @@
             }
         }
 
+        function ValidateRegisterOnClick(s, e) {
+
+            if (ASPxClientEdit.ValidateGroup('registro')) {
+                LoadingPanel.Show();
+
+                return true;
+            }
+            else {
+
+                return false;
+            }
+        }
+
     </script>
 
 
@@ -127,14 +140,14 @@
                             <fieldset class="forms_fieldset">
                                 <div class="forms_field">
                                     <dx:ASPxTextBox ID="txtNombreRegister" NullText="Nombre" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtNombreRegister">
-                                        <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
+                                        <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Right">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
                                 <div class="forms_field">
                                     <dx:ASPxTextBox ID="txtApellidoRegister" NullText="Apellido" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtApellidoRegister">
-                                        <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
+                                        <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Right">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
@@ -143,8 +156,7 @@
                                     <dx:ASPxTextBox ID="txtEmailRegister" NullText="Correo electrónico" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtEmailRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
-                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                                                ErrorText="E-mail inválido. <br/> Formato correcto 'ejemplo@ejemplo.com'" />
+                                            <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorText="Formato inválido. Ejemplo: 'ejemplo@ejemplo.com'" />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
@@ -152,13 +164,14 @@
                                     <dx:ASPxTextBox ID="txtPasswordRegister" Password="true" NullText="Contraseña" Width="100%" CssClass="forms_field-input" runat="server" ClientInstanceName="txtPasswordRegister">
                                         <ValidationSettings ValidationGroup="registro" Display="Dynamic" ErrorTextPosition="Bottom">
                                             <RequiredField IsRequired="True" ErrorText="Campo Obligatorio." />
+                                            <RegularExpression ValidationExpression="^[a-zA-Z0-9#$%&]{6,}$" ErrorText="Formato inválido. La contraseña debe tener al menos 6 caracteres." />
                                         </ValidationSettings>
                                     </dx:ASPxTextBox>
                                 </div>
                             </fieldset>
                             <div class="forms_buttons">
-                                <dx:ASPxButton ID="btnRegistro" runat="server" Text="Registrarme" AutoPostBack="false" CausesValidation="false" RenderMode="Link" CssClass="text-decoration-none forms_buttons-action" OnClick="btnRegistro_Click">
-
+                                <dx:ASPxButton ID="btnRegister" runat="server" Text="Registrarme" AutoPostBack="false" ClientInstanceName="btnRegister" CausesValidation="false" RenderMode="Link" OnClick="btnRegister_Click" CssClass="text-decoration-none forms_buttons-action">
+                                    <ClientSideEvents Click="function(s,e) { ValidateRegisterOnClick(s,e); } " />
                                 </dx:ASPxButton>
                             </div>
                         </section>
@@ -172,7 +185,11 @@
         runat="server" Text="Por favor espere...">
     </dx:ASPxLoadingPanel>
 
-    
+    <%--<dx:ASPxCallback ID="CallbackRegister" runat="server" ClientInstanceName="CallbackRegister" OnCallback="CallbackRegister_Callback">
+        <ClientSideEvents CallbackComplete="function(s,e) { LoadingPanel.Hide(); }" />
+    </dx:ASPxCallback>--%>
+
+
 
 </body>
 

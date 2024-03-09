@@ -114,13 +114,13 @@ namespace BNails
         protected global::DevExpress.Web.ASPxTextBox txtPasswordRegister;
 
         /// <summary>
-        /// Control btnRegistro.
+        /// Control btnRegister.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxButton btnRegistro;
+        protected global::DevExpress.Web.ASPxButton btnRegister;
 
         /// <summary>
         /// Control ASPxLoadingPanel2.

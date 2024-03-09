@@ -50,7 +50,6 @@ namespace BNails
 
             if (HttpContext.Current.Request.ApplicationPath != "/")
             {
-
                 ApplicationPath = HttpContext.Current.Request.ApplicationPath;
             }
         }
