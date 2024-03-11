@@ -266,7 +266,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
     <Content Include="App_Themes\Tema1\assets\extras\animate.min.css" />
     <Content Include="App_Themes\Tema1\assets\fonts\Roboto.css" />
     <Content Include="App_Themes\Tema1\assets\icons\fontawesome\fonts\fontawesome-webfont.svg" />
@@ -276,6 +275,15 @@
     <Content Include="App_Themes\Tema1\assets\icons\phosphor\fonts\Phosphor.svg" />
     <Content Include="App_Themes\Tema1\assets\icons\phosphor\styles.min.css" />
     <Content Include="App_Themes\Tema1\assets\img\check.png" />
+    <Content Include="App_Themes\Tema1\assets\img\favicon.ico" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-1.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-2.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-3.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-4.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-5.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-6.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Logo.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Nav-Logo.jpg" />
     <Content Include="App_Themes\Tema1\assets\img\no.png" />
     <Content Include="App_Themes\Tema1\css\bootstrap\all.min.css" />
     <Content Include="App_Themes\Tema1\css\bootstrap\bootstrap.css" />
@@ -523,7 +531,6 @@
     <Content Include="bin\Web.dll" />
     <Content Include="bin\Web.pdb" />
     <Content Include="bin\WebGrease.dll" />
-    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -541,7 +548,6 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
@@ -643,30 +649,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="bin\Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
