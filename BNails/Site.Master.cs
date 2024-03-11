@@ -33,14 +33,14 @@ namespace BNails
                 else
                 {
                     //No hay usuario, vuelve al Login
-                    Response.Redirect(Global.ApplicationPath + "/Login.aspx", false);
+                    Response.Redirect(Global.ApplicationPath + "/login.aspx", false);
                 }
                 //Obtengo los permisos de la página
                 if (!IsPostBack)
                 {
                     if (Session["usuario"] != null)
                     {
-                        string pageName = this.MainContent.Page.GetType().FullName.Replace("ASP.", "/").Replace("_aspx", ".aspx").Replace("_", "/");
+                        string pageName = this.Body.Page.GetType().FullName.Replace("ASP.", "/").Replace("_aspx", ".aspx").Replace("_", "/");
                         int idUsuario = (int)Session["usuario"];
                         Usuario u = UsuarioServices.getByIdNoInitialize(idUsuario);
                         //List<TipoPermiso> lst = ModuloService.getPermisoIndividualPagina(pageName, u.Rols.ToList<Rol>());
@@ -86,7 +86,7 @@ namespace BNails
             }
             catch (Exception ex)
             {
-                Response.Redirect(Global.ApplicationPath + "/Login.aspx", false);
+                Response.Redirect(Global.ApplicationPath + "/Index.aspx", false);
             }
         }
 

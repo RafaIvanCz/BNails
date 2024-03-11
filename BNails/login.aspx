@@ -121,7 +121,7 @@
                             </fieldset>
                             <div class="forms_buttons">
 
-                                <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" CssClass="fw-medium text-pink text-decoration-none" Cursor="pointer" Text="Olvidaste la contraseña?" Font-Size="Small" NavigateUrl="~/ResetPwd.aspx">
+                                <dx:ASPxHyperLink ID="ASPxHyperLink1" runat="server" CssClass="fw-normal text-pink text-decoration-none fs-6" Cursor="pointer" Text="Olvidaste la contraseña?" Font-Size="Small" NavigateUrl="~/ResetPwd.aspx">
                                 </dx:ASPxHyperLink>
 
                                 <%--<dx:ASPxButton ID="btnForgotPassword" runat="server" Text="Olvidaste la contraseña?" RenderMode="Link" CssClass="text-danger fw-semibold forms_buttons-forgot"></dx:ASPxButton>--%>

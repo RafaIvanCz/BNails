@@ -10,7 +10,7 @@
     <title>Betsa Nails</title>
 
     <%--Style links--%>
-    <link href="App_Themes/Tema1/css/login/login.css" rel="stylesheet" />
+    <link href="App_Themes/Tema1/css/siteMaster/siteMaster.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/layout.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/layout.min.css" rel="stylesheet" />
     <link href="App_Themes/Tema1/css/components.css" rel="stylesheet" />
@@ -34,6 +34,9 @@
     <script src="App_Themes/Tema1/sweetAlerts/extra_sweetalert.js"></script>
     <script src="App_Themes/Tema1/sweetAlerts/sweet_alert.min.js"></script>
     <link href="App_Themes/Tema1/sweetAlerts/sweetalert2.min.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
 
 </head>
 <body>
@@ -69,18 +72,53 @@
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="lnk_salir" PostBackUrl="Logout.aspx" CssClass="navbar-nav-link btn-salir text-white fw-semibold w-80px" runat="server"> <i class="icon-lock2"></i>Salir</asp:LinkButton>
+                        </li>
                     </ul>
                 </div>
+
+
             </div>
         </nav>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
-            </footer>
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Content area -->
+                <div class="content-inner">
+
+                    <asp:ContentPlaceHolder ID="Body" runat="server">
+                    </asp:ContentPlaceHolder>
+
+
+                    <!-- Footer -->
+                    <div class="navbar navbar-sm navbar-footer border-top">
+                        <div class="container-fluid">
+                            <div class="text-center d-lg-none w-100">
+                                <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                                    <i class="icon-unfold mr-2"></i>
+                                </button>
+                            </div>
+
+                            <span class="navbar-text">&copy;
+                        <script>new Date().getFullYear() > 2010 && document.write(new Date().getFullYear());</script>
+                                .<a target="_blank" href="#">B-Nails</a>
+                            </span>
+
+                            <asp:ContentPlaceHolder ID="Footer" runat="server" />
+                        </div>
+                    </div>
+                    <!-- /footer -->
+                </div>
+            </div>
+            <!-- /main content -->
+
         </div>
+        <!-- /page content -->
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>

@@ -66,7 +66,7 @@ namespace BNails
                             myCookie.Expires = DateTime.Now.AddDays(1d);
                             Response.Cookies.Add(myCookie);
 
-                            Response.Redirect(Global.ApplicationPath + "/ResetPwd.aspx", true);
+                            Response.Redirect(Global.ApplicationPath + "/Index.aspx", true);
                             //Response.Redirect(Global.ApplicationPath + "/ImportarPatrones.aspx", true);
                         }
                         else
@@ -92,7 +92,7 @@ namespace BNails
             {
                 if (string.IsNullOrEmpty(txtNombreRegister.Text.Trim()) || string.IsNullOrEmpty(txtApellidoRegister.Text.Trim()) || string.IsNullOrEmpty(txtEmailRegister.Text.Trim()) || string.IsNullOrEmpty(txtPasswordRegister.Text.Trim()))
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Tenes que completar todos los campos.')", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Tenés que completar todos los campos.')", true);
                 }
                 else
                 {
@@ -132,7 +132,7 @@ namespace BNails
                                 String smtpPort = cfg.SMTPPort.ToString();
                                 String body = "Hola " + txtNombreRegister.Text + "!" + " Te doy la bienvenida a " + cfg.NombreConsorcio +
                                     "<br><br>" +
-                                    "Recorda que una vez que te loguees, vas a poder ver todos mis trabajos e incluso reservar una sesión de uñas para cualquier día y horario disponible, con la opción de agregar detalles del modelo que quieras realizarte en la campo de 'Observaciones'." +
+                                    "Recorda que una vez que te loguees, vas a poder ver todos mis trabajos e incluso reservar una sesión de uñas para cualquier día y horario disponible, con la opción de agregar detalles del modelo que quieras realizarte en el campo de 'Observaciones'." +
                                     "<br><br>Espero que tengas una excelente experiencia!" +
                                     "<br><br>Saludos!<br><br>" + Settings.Settings.NombreApp;
 
