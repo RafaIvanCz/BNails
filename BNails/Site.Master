@@ -1,5 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="BNails.SiteMaster" %>
 
+<%@ Register Assembly="DevExpress.Web.v18.1" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
 <!DOCTYPE html>
 
 <html lang="es">
@@ -7,7 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Betsa Nails</title>
+    <title>B-Nails</title>
 
     <%--Style links--%>
     <link href="App_Themes/Tema1/css/siteMaster/siteMaster.css" rel="stylesheet" />
@@ -39,7 +41,7 @@
     </asp:ContentPlaceHolder>
 
 </head>
-<body>
+<body id="body">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -60,27 +62,16 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Alternar navegación" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/About">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Contact">Contacto</a></li>
-                        <li class="nav-item">
-                            <asp:LinkButton ID="lnk_salir" PostBackUrl="Logout.aspx" CssClass="navbar-nav-link btn-salir text-white fw-semibold w-80px" runat="server"> <i class="icon-lock2"></i>Salir</asp:LinkButton>
-                        </li>
-                    </ul>
-                </div>
-
-
+        <section>
+            <div classname="lateral-profile-style position-fixed">
+                <nav classname="navbar">
+                    <a href="/#home1" id="nav-home" classname="nav-item">Home</a>
+                    <a href="/#about" id="nav-about" classname="nav-item">About</a>
+                    <a href="/#portfolio" id="nav-portfolio" classname="nav-item">Portfolio</a>
+                    <a href="/#contact" id="nav-contact" classname="nav-item">Contact</a>
+                </nav>
             </div>
-        </nav>
+        </section>
 
         <!-- Page content -->
         <div class="page-content">
@@ -91,7 +82,7 @@
                 <!-- Content area -->
                 <div class="content-inner">
 
-                    <asp:ContentPlaceHolder ID="Body" runat="server">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
 
 

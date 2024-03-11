@@ -28,7 +28,7 @@ namespace BNails
 
                 if (UsuarioServices.ExisteEmailUser(emailUser) == false)
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Email no registrado. Debe registrarse antes de ingresar.')", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('E-mail no registrado. Tenés que registrarte antes de ingresar.')", true);
                 }
                 else
                 {
@@ -61,10 +61,10 @@ namespace BNails
                             UsuarioServices.SaveOrUpdate(user);
 
                             //GUARDO UNA COOKIE
-                            HttpCookie myCookie = new HttpCookie("usuario_" + user.Id.ToString());
-                            myCookie.Value = user.Id.ToString();
-                            myCookie.Expires = DateTime.Now.AddDays(1d);
-                            Response.Cookies.Add(myCookie);
+                            //HttpCookie myCookie = new HttpCookie("usuario_" + user.Id.ToString());
+                            //myCookie.Value = user.Id.ToString();
+                            //myCookie.Expires = DateTime.Now.AddDays(1d);
+                            //Response.Cookies.Add(myCookie);
 
                             Response.Redirect(Global.ApplicationPath + "/Index.aspx", true);
                             //Response.Redirect(Global.ApplicationPath + "/ImportarPatrones.aspx", true);
@@ -106,7 +106,7 @@ namespace BNails
 
                         if (UsuarioServices.ExisteEmailUser(emailRegister) == true)
                         {
-                            ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Ya existe un Usuario con ese Email.')", true);
+                            ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Ya existe un Usuario con ese E-mail.')", true);
                         }
                         else
                         {
@@ -130,7 +130,7 @@ namespace BNails
                                 String from = cfg.SMTPFrom;
                                 String smtpServer = cfg.SMTPServer;
                                 String smtpPort = cfg.SMTPPort.ToString();
-                                String body = "Hola " + txtNombreRegister.Text + "!" + " Te doy la bienvenida a " + cfg.NombreConsorcio +
+                                String body = "Hola " + txtNombreRegister.Text + "!" + " Te doy la bienvenida a " + cfg.NombreApp +
                                     "<br><br>" +
                                     "Recorda que una vez que te loguees, vas a poder ver todos mis trabajos e incluso reservar una sesión de uñas para cualquier día y horario disponible, con la opción de agregar detalles del modelo que quieras realizarte en el campo de 'Observaciones'." +
                                     "<br><br>Espero que tengas una excelente experiencia!" +

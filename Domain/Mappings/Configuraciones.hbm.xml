@@ -23,14 +23,8 @@
     <property name="Longitud" type="String">
       <column name="Longitud" not-null="false" sql-type="nvarchar" />
     </property>
-    <property name="NombreConsorcio" type="String">
-      <column name="NombreConsorcio" not-null="false" sql-type="nvarchar" />
-    </property>
-    <property name="IPEventos" type="String">
-      <column name="IP_Eventos" not-null="false" length="50" sql-type="nvarchar" />
-    </property>
-    <property name="PortEventos" type="Int32">
-      <column name="Port_Eventos" not-null="false" precision="10" scale="0" sql-type="int" />
+    <property name="NombreApp" type="String">
+      <column name="NombreApp" not-null="false" sql-type="nvarchar" />
     </property>
     <property name="SMTPServer" type="String">
       <column name="SMTP_Server" not-null="false" length="50" sql-type="nvarchar" />

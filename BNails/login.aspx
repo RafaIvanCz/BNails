@@ -6,7 +6,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Betsa Log-In</title>
 
     <%--Style links--%>
@@ -179,6 +179,7 @@
                 </div>
             </div>
         </section>
+
     </form>
 
     <dx:ASPxLoadingPanel Theme="Moderno" ID="ASPxLoadingPanel2" Modal="true" ForeColor="#106488" ClientInstanceName="LoadingPanel"
@@ -188,33 +189,30 @@
     <%--<dx:ASPxCallback ID="CallbackRegister" runat="server" ClientInstanceName="CallbackRegister" OnCallback="CallbackRegister_Callback">
         <ClientSideEvents CallbackComplete="function(s,e) { LoadingPanel.Hide(); }" />
     </dx:ASPxCallback>--%>
-
-
-
 </body>
 
-    <script type="text/javascript">
+<script type="text/javascript">
 
-        var signupButton = document.getElementById('btnRegistrarse'),
-            loginButton = document.getElementById('btnLogin'),
-            userForms = document.getElementById('user_options-forms')
+    var signupButton = document.getElementById('btnRegistrarse'),
+        loginButton = document.getElementById('btnLogin'),
+        userForms = document.getElementById('user_options-forms')
 
-        /**
-         * Add event listener to the "Sign Up" button
-         */
-        signupButton.addEventListener('click', () => {
-            userForms.classList.remove('bounceRight')
-            userForms.classList.add('bounceLeft')
-        }, false)
+    /**
+     * Add event listener to the "Sign Up" button
+     */
+    signupButton.addEventListener('click', () => {
+        userForms.classList.remove('bounceRight')
+        userForms.classList.add('bounceLeft')
+    }, false)
 
-        /**
-         * Add event listener to the "Login" button
-         */
-        loginButton.addEventListener('click', () => {
-            userForms.classList.remove('bounceLeft')
-            userForms.classList.add('bounceRight')
-        }, false)       
+    /**
+     * Add event listener to the "Login" button
+     */
+    loginButton.addEventListener('click', () => {
+        userForms.classList.remove('bounceLeft')
+        userForms.classList.add('bounceRight')
+    }, false)
 
-    </script>
+</script>
 
 </html>

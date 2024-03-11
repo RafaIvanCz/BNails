@@ -40,7 +40,7 @@ namespace BNails
                 {
                     if (Session["usuario"] != null)
                     {
-                        string pageName = this.Body.Page.GetType().FullName.Replace("ASP.", "/").Replace("_aspx", ".aspx").Replace("_", "/");
+                        string pageName = this.MainContent.Page.GetType().FullName.Replace("ASP.", "/").Replace("_aspx", ".aspx").Replace("_", "/");
                         int idUsuario = (int)Session["usuario"];
                         Usuario u = UsuarioServices.getByIdNoInitialize(idUsuario);
                         //List<TipoPermiso> lst = ModuloService.getPermisoIndividualPagina(pageName, u.Rols.ToList<Rol>());

@@ -76,19 +76,20 @@ namespace BNails
                         smtp.Credentials = new NetworkCredential(mailUser, mailPassword);
                         smtp.Send(mail);
 
-                        ScriptManager.RegisterStartupScript(this,this.GetType(),"key1", "showMessage('Email enviado correctamente. Revisá tu correo.')",true);
+                        ScriptManager.RegisterStartupScript(this,this.GetType(),"key1", "showMessage('E-mail enviado correctamente. Revisá tu correo.')",true);
                         txtEmailRestorePwd.Text = "";
+                        txtEmailRestorePwd.Enabled = false;
                     }
                 }
                 else
                 {
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('No se encontro una cuenta asociada a ese email.')", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('No se encontro una cuenta asociada a ese E-mail.')", true);
                     txtEmailRestorePwd.Text = "";
                 }
             }
             catch (Exception ex)
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Error enviando email, consulte al administrador del sistema.')", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Error enviando E-mail, consulte al administrador del sistema.')", true);
 
             }
         }

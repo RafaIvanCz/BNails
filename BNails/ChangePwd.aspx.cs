@@ -40,6 +40,8 @@ namespace BNails
 
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "key1", "showMessage('Se actualizó tu contraseña. Ya podés loguearte!')", true);
 
+                            txtNewPwd.Enabled = false;
+                            txtRepeatNewPwd.Enabled = false;
                             btnBackLogin.Visible = true;
                             btnConfirmChangePwd.Visible = false;
                         }
