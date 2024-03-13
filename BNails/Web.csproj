@@ -293,6 +293,7 @@
     <Content Include="App_Themes\Tema1\css\changePwd\changePwd.css" />
     <Content Include="App_Themes\Tema1\css\components.css" />
     <Content Include="App_Themes\Tema1\css\components.min.css" />
+    <Content Include="App_Themes\Tema1\css\index\index.css" />
     <Content Include="App_Themes\Tema1\css\layout.css" />
     <Content Include="App_Themes\Tema1\css\layout.min.css" />
     <Content Include="App_Themes\Tema1\css\login\login.css" />

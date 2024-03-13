@@ -1,0 +1,19 @@
+﻿body {
+}
+
+.btn-seccion {
+    letter-spacing: 0.2rem;
+}
+
+.caveat-salir {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.caveat-brush-regular {
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+}

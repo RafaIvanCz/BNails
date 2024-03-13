@@ -7,3 +7,48 @@
     scroll-behavior: smooth;
     overflow-y: scroll;
 }
+
+.navbar-text {
+    position: relative;
+    color: #274c77;
+    letter-spacing: 0.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.navbar-text:hover,
+.btn-salir:hover {
+    transition: ease-in-out 0.3s;
+    transform: scale(1.2);
+}
+
+.navbar-text::before,
+.navbar-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #274c77;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+}
+
+.navbar-text::before {
+    top: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.navbar-text::after {
+    bottom: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.navbar-text:hover::before {
+    transform: scaleX(1);
+}
+
+.navbar-text:hover::after {
+    transform: scaleX(1);
+}
