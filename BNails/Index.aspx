@@ -12,10 +12,15 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <section id="sectionHeader" class="bg-danger-subtle text-danger-emphasis mb-5 pb-5">
+    <section id="sectionHeader" class="bg-danger-subtle text-danger-emphasis mb-5 vh-100 hero-bg" >
+        <div class="pb-5">
+            <h1 class="text-hero1 caveat-hero">Transformando tus manos <br /> <spam>en una obra de arte</spam></h1>
+            <%--<h1 class="text-hero2 caveat-hero">en una obra de arte</h1>--%>
+        </div>
         <div class="">
-            <h1 class="text-hero1 caveat-hero">Transformando tus manos</h1>
-            <h1 class="text-hero2 caveat-hero">en una obra de arte</h1>
+            <h5 class="text-below-hero mb-0">Soy Betsabé, una apasionada por el cuidado de manos. Con dedicación y habilidad,</h5>
+            <h5 class="text-below-hero">te invito a descubrir el encanto de una manicura verdaderamente única</h5>
+            <h5 class="text-below-hero">Bienvenida a mi espacio de belleza y confianza!</h5>
         </div>
     </section>
 

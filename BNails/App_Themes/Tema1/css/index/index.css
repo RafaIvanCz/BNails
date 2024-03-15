@@ -1,6 +1,13 @@
 ﻿body {
 }
 
+.hero-bg {
+    background-image: url('../../assets/img/image-bg.jpeg');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    background-position: center; /* Centra la imagen horizontalmente */
+    background-position-y: revert;
+}
+
 .btn-seccion {
     letter-spacing: 0.2rem;
 }
@@ -10,7 +17,7 @@
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 700%;    
+    font-size: 800%;    
 }
 
 .caveat-brush-regular {
@@ -22,14 +29,22 @@
 .text-hero1 {
     display: grid;
     place-items: center;
+    color: #fb6f92;
     letter-spacing: 0.5rem;
-    transform: skewY(-4deg);
-    margin-top: 5%;
+    transform: skewY(-3deg);
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 
 .text-hero2 {
     display: grid;
     place-items: center;
     letter-spacing: 0.5rem;
-    transform: skewY(-3deg);
+    transform: skewY(-4deg);
+    padding-top: 0;
+}
+
+.text-below-hero {
+    display: grid;
+    place-items: center;
 }

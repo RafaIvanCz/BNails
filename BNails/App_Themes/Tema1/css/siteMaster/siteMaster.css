@@ -28,8 +28,8 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 4px;
-    background-color: #274c77;
+    height: 2px;
+    background-color: #58151C;
     transition: transform 0.3s ease-in-out;
     z-index: -1;
 }

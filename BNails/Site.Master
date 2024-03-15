@@ -64,11 +64,11 @@
 
         <section>
             <div class="vw-100">
-                <nav class="navbar d-flex justify-content-evenly fs-1 fw-semibold" style="background: #ffb3c6;">                    
+                <nav class="navbar d-flex justify-content-evenly fs-4 fw-semibold" style="background: #ffb3c6;">                    
                     <a href="/Index.aspx" id="nav-logo" class="nav-item"">
-                        <img src="App_Themes/Tema1/assets/img/Nav-Logo.jpg" class="rounded-2" width="75" />
+                        <img src="App_Themes/Tema1/assets/img/Nav-Logo.jpg" class="rounded-2" width="50" />
                     </a>
-                    <a href="/Index.aspx" id="nav-home" class="nav-item navbar-text py-0 text-danger-emphasis">Home</a>
+                    <a href="/Index.aspx" id="nav-home" class="nav-item navbar-text py-0">Home</a>
                     <a href="/Index.aspx" id="nav-about" class="nav-item navbar-text py-0">About</a>
                     <a href="/Index.aspx" id="nav-portfolio" class="nav-item navbar-text py-0">Portfolio</a>
                     <a href="/Index.aspx" id="nav-contact" class="nav-item navbar-text py-0">Contact</a>

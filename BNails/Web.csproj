@@ -282,6 +282,7 @@
     <Content Include="App_Themes\Tema1\assets\img\Image-4.jpeg" />
     <Content Include="App_Themes\Tema1\assets\img\Image-5.jpeg" />
     <Content Include="App_Themes\Tema1\assets\img\Image-6.jpeg" />
+    <Content Include="App_Themes\Tema1\assets\img\Image-bg.jpeg" />
     <Content Include="App_Themes\Tema1\assets\img\Logo.jpeg" />
     <Content Include="App_Themes\Tema1\assets\img\Nav-Logo.jpg" />
     <Content Include="App_Themes\Tema1\assets\img\no.png" />
