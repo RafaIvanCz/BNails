@@ -9,17 +9,18 @@
 }
 
 .navbar-text {
-    position: relative;
-    color: #274c77;
+    position: relative;    
     letter-spacing: 0.2rem;
+    text-decoration: none;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.navbar-text:hover,
-.btn-salir:hover {
-    transition: ease-in-out 0.3s;
-    transform: scale(1.2);
-}
+    .navbar-text:hover,
+    .btn-salir:hover {
+        transition: ease-in-out 0.3s;
+        transform: scale(1.1);
+        color: #723d46;
+    }
 
 .navbar-text::before,
 .navbar-text::after {
@@ -27,7 +28,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    height: 2px;
+    height: 4px;
     background-color: #274c77;
     transition: transform 0.3s ease-in-out;
     z-index: -1;

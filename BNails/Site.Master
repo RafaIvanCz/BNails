@@ -68,11 +68,11 @@
                     <a href="/Index.aspx" id="nav-logo" class="nav-item"">
                         <img src="App_Themes/Tema1/assets/img/Nav-Logo.jpg" class="rounded-2" width="75" />
                     </a>
-                    <a href="/Index.aspx" id="nav-home" class="nav-item navbar-text">Home</a>
-                    <a href="/Index.aspx" id="nav-about" class="nav-item navbar-text">About</a>
-                    <a href="/Index.aspx" id="nav-portfolio" class="nav-item navbar-text">Portfolio</a>
-                    <a href="/Index.aspx" id="nav-contact" class="nav-item navbar-text">Contact</a>
-                    <asp:LinkButton ID="lnk_salir" PostBackUrl="Logout.aspx" style="color: #ffcdb2;" CssClass="btn-salir rounded-2 bg-dark px-3 py-1" runat="server">Salir</asp:LinkButton>
+                    <a href="/Index.aspx" id="nav-home" class="nav-item navbar-text py-0 text-danger-emphasis">Home</a>
+                    <a href="/Index.aspx" id="nav-about" class="nav-item navbar-text py-0">About</a>
+                    <a href="/Index.aspx" id="nav-portfolio" class="nav-item navbar-text py-0">Portfolio</a>
+                    <a href="/Index.aspx" id="nav-contact" class="nav-item navbar-text py-0">Contact</a>
+                    <asp:LinkButton ID="lnk_salir" PostBackUrl="Logout.aspx" style="color: #ffcdb2;" CssClass="btn-salir rounded-2 bg-dark px-3 py-1 text-decoration-none" runat="server">Salir</asp:LinkButton>
                 </nav>
             </div>
         </section>

@@ -5,19 +5,22 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Head" runat="server">
 
     <link href="App_Themes/Tema1/css/index/index.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
 
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <%--<section id="sectionHeader" class="vh-100">
-        <div>
-
+    <section id="sectionHeader" class="bg-danger-subtle text-danger-emphasis mb-5 pb-5">
+        <div class="">
+            <h1 class="text-hero1 caveat-hero">Transformando tus manos</h1>
+            <h1 class="text-hero2 caveat-hero">en una obra de arte</h1>
         </div>
-    </section>--%>
+    </section>
 
     <section class="mt-3" id="section1">
-        <div class="row gx-0 d-flex justify-content-evenly">
+        <div class="row gx-0 d-flex justify-content-around">
             <div class="card col-3">
                 <img src="App_Themes/Tema1/assets/img/Image-1.jpeg" class="rounded-1" />
                 <div class="card-body">
@@ -55,13 +58,13 @@
     <fieldset><legend class="col-lg-12 border-danger border-bottom border-width-3"></legend></fieldset>
 
     <section class="d-flex justify-content-center mt-5" id="section2">
-        <div class="row">
-            <div class="card col-4">
+        <div class="row gx-0">
+            <div class="card col-4 w-25 border border-0">
                 <img src="App_Themes/Tema1/assets/img/Image-4.jpeg" class="rounded-1" />
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <%--<a href="#" class="btn btn-primary">Go somewhere</a>--%>
                 </div>
             </div>
 
@@ -70,7 +73,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <%--<a href="#" class="btn btn-primary">Go somewhere</a>--%>
                 </div>
             </div>
 
@@ -79,7 +82,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <%--<a href="#" class="btn btn-primary">Go somewhere</a>--%>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">

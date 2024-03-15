@@ -5,15 +5,31 @@
     letter-spacing: 0.2rem;
 }
 
-.caveat-salir {
+.caveat-hero {
     font-family: "Caveat", cursive;
     font-optical-sizing: auto;
-    font-weight: 900;
+    font-weight: 400;
     font-style: normal;
+    font-size: 700%;    
 }
 
 .caveat-brush-regular {
     font-family: "Caveat Brush", cursive;
     font-weight: 400;
     font-style: normal;
+}
+
+.text-hero1 {
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.5rem;
+    transform: skewY(-4deg);
+    margin-top: 5%;
+}
+
+.text-hero2 {
+    display: grid;
+    place-items: center;
+    letter-spacing: 0.5rem;
+    transform: skewY(-3deg);
 }
